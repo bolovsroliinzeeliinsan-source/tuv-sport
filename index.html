@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tuv-sport</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- HEADER & MENU -->
+		<section id="nav-bar">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand" href="index.html"><img src="img/tuv.jpg"></a>
+				<h1>Tuv Sport</h1>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Нүүр</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="packages.html">Үйлчилгээ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="gallery.html">Зураг</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html">Бидний тухай</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.html">Мэдүүлэг бөглөх</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+		
+		<!-- IMAGE SLIDER -->
+		<div id="slider">
+			<div id="headerSlider" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+					<li data-target="#headerSlider" data-slide-to="0" class="active"></li>
+					<li data-target="#headerSlider" data-slide-to="1"></li>
+					<li data-target="#headerSlider" data-slide-to="2"></li>
+				</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/zaal1.jpg" class="d-block w-100" alt="first slide">
+				</div>
+				<div class="carousel-item">
+					<img src="img/zaal2.jpg" class="d-block w-100" alt="second slide">
+				</div>
+			</div>
+				<a class="carousel-control-prev" href="#headerSlider" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Өмнөх</span>
+				</a>
+				<a class="carousel-control-next" href="#headerSlider" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Дараах</span>
+				</a>
+			</div>
+		</div>
+		
+		<!-- ABOUT US & PROGRESS BAR -->
+		<section id="title">
+			<div>
+				<h4>Манай заал захиалгын системд тавтай морилно уу</h4>
+				<img src="img/tuv.jpg">
+				<h1>Төв Спорт</h1>
+			</div>
+		</section>
+		
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Бидний тухай</h2>
+						<div class="about-content">
+							Төв аймгийн Биеийн тамир, спортын газар нь Төв аймагт биеийн тамир, спортын бодлогыг хэрэгжүүлэх, иргэдийг спортоор хичээллэх нөхцөл боломжийг бүрдүүлэх чиг үүрэг бүхий аймгийн Засаг даргын дэргэдэх хэрэгжүүлэгч агентлаг юм. 
+						</div>
+						<button type="button" class="btn btn-primary"><a href="about.html">Дэлгэрэнгүй</a></button>
+					</div>
+					<div class="col-md-6 skills-bar">
+						<p>Орчин</p>
+						<div class="progress">
+							<div class="progress-bar" style="width: 100%;">100%</div>
+						</div>
+						<p>Агааржуулалт</p>
+						<div class="progress">
+							<div class="progress-bar" style="width: 100%;">100%</div>
+						</div>
+						<p>Тав тухай байдал</p>
+						<div class="progress">
+							<div class="progress-bar" style="width: 100%;">100%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- PACKAGES -->
+		<div class="pack">
+		<h1>Бидний үйлчилгээ</h1>
+		</div>
+		<section id="packages">
+			<div class="box">
+				<div class="content">
+					<div>
+						<h2>Спорт заал</h2>
+						<p>
+							Спорт заалны захиалга 08:00 - 22:00 хооронд авч байна
+						</p>
+						<a href="gardenView.html">Дэлгэрэнгүй</a>
+					</div>
+				</div>
+				<img src="img/zaal.jpg">
+			</div>
+			<div class="box">
+				<div class="content">
+					<div>
+						<h2>Fitness</h2>
+						<p>
+							Fitness сарын төлбөр 60.000₮
+						</p>
+						<a href="oceanView.html">Дэлгэрэнгүй</a>
+					</div>
+				</div>
+				<img src="img/Fitness.jpg">
+			</div>
+		</section>
+		
+<section id="booking" class="container mt-5">
+
+<h2 class="text-center">Заал захиалах</h2>
+
+<div class="booking-box">
+
+<!-- Calendar -->
+<div class="calendar">
+
+<div class="calendar-header">
+<button id="prevMonth">◀</button>
+<h4 id="monthYear"></h4>
+<button id="nextMonth">▶</button>
+</div>
+
+<div class="calendar-days">
+<div>Ням</div>
+<div>Даваа</div>
+<div>Мягмар</div>
+<div>Лхагва</div>
+<div>Пүрэв</div>
+<div>Баасан</div>
+<div>Бямба</div>
+</div>
+
+<div id="calendarDates" class="calendar-dates"></div>
+
+</div>
+<div class="form-group mt-4">
+<label>Нэр</label>
+<input type="text" id="customerName" class="form-control" placeholder="Нэрээ оруулна уу">
+</div>
+
+<div class="form-group">
+<label>Утас</label>
+<input type="text" id="customerPhone" class="form-control" placeholder="99123326">
+</div>
+<div class="form-group">
+<label>Заалны төрөл</label>
+<select id="hallType" class="form-control">
+<option value="">Сонгоно уу</option>
+<option value="sport">Спорт заал</option>
+<option value="tennis">Теннис</option>
+<option value="fitness">Fitness</option>
+</select>
+</div>
+<h4 class="mt-4">Сул цаг</h4>
+<div id="timeSlots" class="time-container"></div>
+
+<button class="btn btn-primary mt-3" onclick="createInvoice()">
+  Захиалах
+</button>
+
+<p id="result"></p>
+<div id="paymentInfo" style="display:none" class="alert alert-info mt-3">
+
+<h5>Төлбөрийн мэдээлэл</h5>
+
+<p><b>Банк:</b> Төрийн сан</p>
+<p><b>Данс:</b> 100140034410</p>
+<p><b>IBAN:</b> 08 0090</p>
+<p><b>Дансны нэр:</b> ТӨ.БТСГ.Н.С</p>
+
+<p style="color:red">
+Гүйлгээний утга: Цаг + Утасны дугаар
+</p>
+
+</div>
+
+</div>
+</section>
+
+</div>
+</section>
+		
+		<!-- SERVICES -->
+		<section id="services">
+			<div class="services">
+				<h1>Бидний үйлчилгээ</h1>
+				<div class="cen">
+					<div class="service">
+						<i class="fas fa-utensils"></i>
+						<h2>Хоол, ус, ундаа</h2>
+						<p>
+							Та дотроосоо өөрт хэрэгтэй хүнсний бүтээгдэхүүнээ худалдан авах боломжтой.
+						</p>
+					</div>
+
+					<div class="service">
+						<i class="fas fa-tty"></i>
+						<h2>Захиалга</h2>
+						<p>
+							Та интернет орох боломжгүй үедээ утсаар захиалга өгөх боломжтой.
+						</p>
+					</div>
+
+					<div class="service">
+						<i class="fas fa-stopwatch"></i>
+						<h2>Цаг</h2>
+						<p>
+							Та хүссэн үедээ онлайнаар захиалга өгөх боломжтой.
+						</p>
+					</div>
+
+					<div class="service">
+						<i class="fas fa-map-marked"></i>
+						<h2>Байршил</h2>
+						<p>
+							Байршил давуу тал бичиж өгнө.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- FOOTER -->
+		<div class="footer">
+			<div class="inner-footer">
+				<div class="footer-items">
+					<h1>TUV SPORT</h1>
+					<p>
+						Төв аймгийн Биеийн тамир, спортын газар
+					</p>
+				</div>
+				
+				<div class="footer-items">
+					<h2>Бидэнтэй холбогдох</h2>
+					<div class="border"></div>
+					<ul>
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i>Төв аймаг, Зуунмод сум</li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i>(+976) 9912-3326</li>
+						<li><i class="fa fa-envelope" aria-hidden="true"></i>tuvsport11@gmail.com</li>
+					</ul>
+				</div>
+				
+				<div class="footer-items">
+					<h2>Мэдэгдэл хүлээн авах</h2>
+					<div class="border"></div>
+					<div class="newsletter">
+						<p>Хэрэв та бидний шинэ мэдээг цаг алдахгүй авахыг хүсвэл и-мэйл хаягаа бүртгүүлээрэй</p>
+					</div>
+					<form>
+						<input type="email" name="email" placeholder="И-Мэйл">
+						<input type="submit" value="Бүртгүүлэх">
+					</form>
+				</div>
+</div>
+</div>
+<div class="footer-bottom">
+    Зохиогчийн эрх&copy; 2026 - <b>Tuv Sport</b>. Бүх эрх хуулиар хамгаалагдсан.<b>Танд баярлалаа ❤</b>
+</div>
+</div>
+
+<script>
+const prices = {
+  sport: 60000,
+  tennis: 10000,
+};
+
+// 🔥 DOM бэлэн болсны дараа ажиллана
+document.addEventListener("DOMContentLoaded", function(){
+
+  document.getElementById("prevMonth").onclick=function(){
+    date.setMonth(date.getMonth()-1);
+    renderCalendar();
+  }
+
+  document.getElementById("nextMonth").onclick=function(){
+    date.setMonth(date.getMonth()+1);
+    renderCalendar();
+  }
+
+  // 🔥 хамгийн чухал
+  renderCalendar();
+
+});
+
+// календар
+let date=new Date();
+let selectedDate=null;
+
+function renderCalendar(){
+
+let year=date.getFullYear();
+let month=date.getMonth();
+
+let firstDay=new Date(year,month,1).getDay();
+let lastDate=new Date(year,month+1,0).getDate();
+
+document.getElementById("monthYear").innerText=
+date.toLocaleString("default",{month:"long",year:"numeric"});
+
+let container=document.getElementById("calendarDates");
+container.innerHTML="";
+
+for(let i=0;i<firstDay;i++){
+container.innerHTML+="<div></div>";
+}
+
+for(let d=1;d<=lastDate;d++){
+
+let div=document.createElement("div");
+div.className="date";
+div.innerText=d;
+
+div.onclick=function(){
+
+document.querySelectorAll(".date")
+.forEach(el=>el.classList.remove("selected-date"));
+
+div.classList.add("selected-date");
+
+selectedDate=year+"-"+(month+1)+"-"+d;
+
+generateTimeSlots();
+
+}
+
+container.appendChild(div);
+
+}
+}
+function generateTimeSlots(){
+
+let times=[
+"08:00","09:00","10:00","11:00",
+"12:00","13:00","14:00","15:00",
+"16:00","17:00","18:00","19:00",
+"20:00","21:00","22:00"
+];
+
+let container=document.getElementById("timeSlots");
+container.innerHTML="";
+
+times.forEach(time=>{
+
+let btn=document.createElement("button");
+btn.className="time-slot";
+btn.innerText=time;
+
+btn.onclick=function(){
+btn.classList.toggle("selected");
+};
+
+container.appendChild(btn);
+
+});
+}
+
+// захиалга
+function bookTime(){
+
+let name=document.getElementById("customerName").value;
+let phone=document.getElementById("customerPhone").value;
+
+let selected=document.querySelectorAll(".selected");
+
+if(name=="" || phone==""){
+alert("Нэр болон утсаа бөглөнө үү");
+return;
+}
+
+if(selected.length==0){
+alert("Цаг сонгоно уу");
+return;
+}
+
+let times=[];
+selected.forEach(t=>times.push(t.innerText));
+
+document.getElementById("paymentInfo").style.display="block";
+
+document.getElementById("result").innerHTML=
+"✔ "+name+" таны "+selectedDate+" өдөр "+times.join(", ")+" захиалга бүртгэгдлээ.";
+
+}
+
+// QPay
+async function createInvoice(){
+
+  let name = document.getElementById("customerName").value;
+  let phone = document.getElementById("customerPhone").value;
+  let hall = document.getElementById("hallType").value;
+
+  let selected = document.querySelectorAll(".selected");
+
+  if(name=="" || phone==""){
+    alert("Нэр болон утсаа бөглөнө үү");
+    return;
+  }
+
+  if(!selectedDate){
+    alert("Өдөр сонгоно уу");
+    return;
+  }
+
+  if(selected.length==0){
+    alert("Цаг сонгоно уу");
+    return;
+  }
+
+  if(hall==""){
+    alert("Заалны төрөл сонгоно уу");
+    return;
+  }
+
+  let pricePerHour = prices[hall];
+  let totalHours = selected.length;
+  let totalAmount = pricePerHour * totalHours;
+
+  let times=[];
+  selected.forEach(t=>times.push(t.innerText));
+
+  let res = await fetch("/api/create-invoice.js", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({ 
+      name, 
+      phone, 
+      times,
+      amount: totalAmount
+    })
+  });
+
+  let data = await res.json();
+
+  let box = document.getElementById("paymentInfo");
+  box.style.display = "block";
+
+  box.innerHTML = `
+  <hr>
+  <h5>QPay төлбөр</h5>
+  <p><b>Нийт дүн:</b> ${totalAmount}₮</p>
+  <img src="data:image/png;base64,${data.qr}" width="200"/>
+  <p>QR уншуулж төлбөр хийнэ үү</p>
+  `;
+}
+</script>
