@@ -14,8 +14,6 @@ module.exports = async function handler(req, res) {
 
     const amount = Number(body.amount || 0);
 
-    console.log("🔥 AMOUNT:", amount);
-
     if (!amount || amount <= 0) {
       return res.status(400).json({ error: "Invalid amount" });
     }
