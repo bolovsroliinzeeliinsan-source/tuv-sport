@@ -455,16 +455,23 @@ async function createInvoice(){
   let times=[];
   selected.forEach(t=>times.push(t.innerText));
 
-  let res = await fetch("/api/create-invoice", {
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body: JSON.stringify({ 
-      name, 
-      phone, 
-      times,
-      amount: totalAmount
-    })
-  });
+const amount = Number(totalAmount);
+
+if (!amount || amount <= 0) {
+  alert("Дүн буруу байна");
+  return;
+}
+
+let res = await fetch("/api/create-invoice", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    name,
+    phone,
+    times,
+    amount
+  })
+});
 
   let data = await res.json();
 

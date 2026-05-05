@@ -7,8 +7,9 @@ export default async function handler(req, res) {
   }
 
   try {
-
-const body = req.body || {};
+const body = typeof req.body === "string"
+  ? JSON.parse(req.body)
+  : req.body || {};
 const amount = body.amount || 0;
 
 console.log("🔥 AMOUNT:", amount);
@@ -21,10 +22,10 @@ if (!amount || amount <= 0) {
       "https://merchant.qpay.mn/v2/auth/token",
       {},
       {
-        auth: {
-          username: "TUVSPORT",
-          password: "48zFv0rt"
-        }
+auth: {
+  username: process.env.QPAY_USER,
+  password: process.env.QPAY_PASS
+}
       }
     );
 
