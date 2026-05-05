@@ -1,35 +1,35 @@
-import axios from "axios";
+const axios = require("axios");
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
 
   if (req.method !== "POST") {
     return res.status(405).send("Method not allowed");
   }
 
   try {
-const body = typeof req.body === "string"
-  ? JSON.parse(req.body)
-  : req.body || {};
-const amount = body.amount || 0;
 
-console.log("🔥 AMOUNT:", amount);
+    const body = typeof req.body === "string"
+      ? JSON.parse(req.body)
+      : req.body || {};
 
-// ✅ ЭНЭГ НЭМ
-if (!amount || amount <= 0) {
-  return res.status(400).json({ error: "Invalid amount" });
-}
+    const amount = Number(body.amount || 0);
+
+    console.log("🔥 AMOUNT:", amount);
+
+    if (!amount || amount <= 0) {
+      return res.status(400).json({ error: "Invalid amount" });
+    }
+
     const tokenResponse = await axios.post(
       "https://merchant.qpay.mn/v2/auth/token",
       {},
       {
-auth: {
-  username: process.env.QPAY_USER,
-  password: process.env.QPAY_PASS
-}
+        auth: {
+          username: process.env.QPAY_USER,
+          password: process.env.QPAY_PASS
+        }
       }
     );
-
-    console.log("🔥 TOKEN OK");
 
     const token = tokenResponse.data.access_token;
 
@@ -50,18 +50,16 @@ auth: {
       }
     );
 
-    console.log("🔥 INVOICE OK");
-
     res.status(200).json({
       qr: invoice.data.qr_image,
       invoice_id: invoice.data.invoice_id
     });
 
   } catch (err) {
-    console.log("🔥 FULL ERROR:", err.response?.data || err.message);
+    console.log("🔥 ERROR:", err.response?.data || err.message);
 
     res.status(500).json({
       error: err.response?.data || err.message
     });
   }
-}
+};
