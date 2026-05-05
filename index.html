@@ -393,7 +393,7 @@ function bookTime(){
 let name=document.getElementById("customerName").value;
 let phone=document.getElementById("customerPhone").value;
 
-let selected=document.querySelectorAll(".selected");
+let selected=document.querySelectorAll(".time-slot.selected")
 
 if(name=="" || phone==""){
 alert("Нэр болон утсаа бөглөнө үү");
@@ -422,7 +422,7 @@ async function createInvoice(){
   let phone = document.getElementById("customerPhone").value;
   let hall = document.getElementById("hallType").value;
 
-  let selected = document.querySelectorAll(".selected");
+  let selected = document.querySelectorAll(".time-slot.selected")
 
   if(name=="" || phone==""){
     alert("Нэр болон утсаа бөглөнө үү");
@@ -473,17 +473,29 @@ let res = await fetch("/api/create-invoice", {
   })
 });
 
-  let data = await res.json();
+if (!res.ok) {
+  let err = await res.text();
+  alert("Server алдаа: " + err);
+  return;
+}
 
-  let box = document.getElementById("paymentInfo");
-  box.style.display = "block";
+// 👉 НЭГ Л УДАА
+let data = await res.json();
 
-  box.innerHTML = `
+if (!data.qr) {
+  alert("QR үүссэнгүй");
+  return;
+}
+
+let box = document.getElementById("paymentInfo");
+box.style.display = "block";
+
+box.innerHTML = `
   <hr>
   <h5>QPay төлбөр</h5>
-  <p><b>Нийт дүн:</b> ${totalAmount}₮</p>
+  <p><b>Нийт дүн:</b> ${amount}₮</p>
   <img src="data:image/png;base64,${data.qr}" width="200"/>
   <p>QR уншуулж төлбөр хийнэ үү</p>
-  `;
+`;
 }
 </script>
