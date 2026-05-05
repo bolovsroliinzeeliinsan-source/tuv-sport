@@ -182,7 +182,6 @@
 <option value="">Сонгоно уу</option>
 <option value="sport">Спорт заал</option>
 <option value="tennis">Теннис</option>
-<option value="fitness">Fitness</option>
 </select>
 </div>
 <h4 class="mt-4">Сул цаг</h4>
@@ -446,6 +445,10 @@ async function createInvoice(){
   }
 
   let pricePerHour = prices[hall];
+  if (!pricePerHour) {
+  alert("Үнэ тохируулагдаагүй байна");
+  return;
+}
   let totalHours = selected.length;
   let totalAmount = pricePerHour * totalHours;
 

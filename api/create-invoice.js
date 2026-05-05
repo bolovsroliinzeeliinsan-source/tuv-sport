@@ -8,11 +8,15 @@ export default async function handler(req, res) {
 
   try {
 
-    const body = req.body || {};
-    const amount = body.amount || 0;
+const body = req.body || {};
+const amount = body.amount || 0;
 
-    console.log("🔥 AMOUNT:", amount);
+console.log("🔥 AMOUNT:", amount);
 
+// ✅ ЭНЭГ НЭМ
+if (!amount || amount <= 0) {
+  return res.status(400).json({ error: "Invalid amount" });
+}
     const tokenResponse = await axios.post(
       "https://merchant.qpay.mn/v2/auth/token",
       {},
